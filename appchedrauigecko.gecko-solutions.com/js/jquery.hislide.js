@@ -29,15 +29,17 @@
         var $lis = $ele.find('li');
         var timer = null;
 
-        $ele.on('mouseenter', function() {
+        // $ele.on('mouseenter', function() {
+        // }).on('mouseleave', function() {
+        //     autoPlay();
+        // });
+
+        setTimeout(() => {
             clearInterval(timer);
             timer = null;
-        }).on('mouseleave', function() {
-            autoPlay();
-        });
-
+            autoPlay();            
+        }, 1999);
         move();
-        autoPlay();
 
         // 让每个 li 对应上面 states 的每个状态
         // 让 li 从正中间展开
