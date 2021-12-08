@@ -124,41 +124,41 @@
   
   <script>
       let bottles = [
-        "./bottles/botella1.png",
-        "./bottles/botella2.png",
-        "./bottles/botella3.png",
-        "./bottles/botella4.png",
-        "./bottles/botella5.png",
-        "./bottles/botella1.png",
-        "./bottles/botella2.png",
-        "./bottles/botella3.png",
-        "./bottles/botella4.png",
-        "./bottles/botella5.png",
+        { src: "./bottles/botella1.png", desc: "./bottles/description_bottle1.png" },
+        { src: "./bottles/botella2.png", desc: "./bottles/description_bottle2.png" },
+        { src: "./bottles/botella3.png", desc: "./bottles/description_bottle3.png" },
+        { src: "./bottles/botella4.png", desc: "./bottles/description_bottle4.png" },
+        { src: "./bottles/botella5.png", desc: "./bottles/description_bottle5.png" },
+        { src: "./bottles/botella1.png", desc: "./bottles/description_bottle1.png" },
+        { src: "./bottles/botella2.png", desc: "./bottles/description_bottle2.png" },
+        { src: "./bottles/botella3.png", desc: "./bottles/description_bottle3.png" },
+        { src: "./bottles/botella4.png", desc: "./bottles/description_bottle4.png" },
+        { src: "./bottles/botella5.png", desc: "./bottles/description_bottle5.png" },
       ],
       pc = [
-        "./electro/electro_3.png",
-        "./electro/electro_4.png",
-        "./electro/electro_5.png",
-        "./electro/electro1.png",
-        "./electro/electro2.png",
-        "./electro/electro_3.png",
-        "./electro/electro_4.png",
-        "./electro/electro_5.png",
-        "./electro/electro1.png",
-        "./electro/electro2.png",
+        { src: "./electro/electro_3.png", desc: "./electro/description_electro1.png",},
+        { src: "./electro/electro_4.png", desc: "./electro/description_electro2.png",},
+        { src: "./electro/electro_5.png", desc: "./electro/description_electro3.png",},
+        { src: "./electro/electro1.png", desc: "./electro/description_electro4.png",},
+        { src: "./electro/electro2.png", desc: "./electro/description_electro5.png",},
+        { src: "./electro/electro_3.png", desc: "./electro/description_electro1.png",},
+        { src: "./electro/electro_4.png", desc: "./electro/description_electro2.png",},
+        { src: "./electro/electro_5.png", desc: "./electro/description_electro3.png",},
+        { src: "./electro/electro1.png", desc: "./electro/description_electro4.png",},
+        { src: "./electro/electro2.png", desc: "./electro/description_electro5.png",},
 
       ],
       furniture = [
-        "./furniture/mueble_2.png",
-        "./furniture/mueble_4.png",
-        "./furniture/mueble5.png",
-        "./furniture/muebles_3.png",
-        "./furniture/muebles1.png",
-        "./furniture/mueble_2.png",
-        "./furniture/mueble_4.png",
-        "./furniture/mueble5.png",
-        "./furniture/muebles_3.png",
-        "./furniture/muebles1.png",
+        { src: "./furniture/mueble_2.png", desc: "./furniture/description_mueble1.png" },
+        { src: "./furniture/mueble_4.png", desc: "./furniture/description_muebles2.png" },
+        { src: "./furniture/mueble5.png", desc: "./furniture/description_mueble3.png" },
+        { src: "./furniture/muebles_3.png", desc: "./furniture/description_mueble4.png" },
+        { src: "./furniture/muebles1.png", desc: "./furniture/description_mueble5.png" },
+        { src: "./furniture/mueble_2.png", desc: "./furniture/description_mueble1.png" },
+        { src: "./furniture/mueble_4.png", desc: "./furniture/description_muebles2.png" },
+        { src: "./furniture/mueble5.png", desc: "./furniture/description_mueble3.png" },
+        { src: "./furniture/muebles_3.png", desc: "./furniture/description_mueble4.png" },
+        { src: "./furniture/muebles1.png", desc: "./furniture/description_mueble5.png" },
       ]
   </script>
 
@@ -392,9 +392,7 @@
         </div>        
   
       </div>
-    
-
-
+      
       <div id="carousel-screen" class="carousel-screen" style="width: 100%; text-align: center; display: none;padding-top: 5rem;padding-bottom: 5rem;">
         <br><br><br><br>
         <br><br><br><br>
@@ -402,17 +400,16 @@
           <button  onclick="window.location.reload()" class="btn text-white">Close</button>
           <div class="slide hi-slide">
             <ul>
-              <li> <img src="" alt="Img 1" /></li>
-              <li><img src="" alt="Img 2" /></li>
-              <li><img src="" alt="Img 2" /></li>
-              <li><img src="" alt="Img 2" /></li>
-              <li><img src="" alt="Img 2" /></li>
-              
-              <li><img src="" alt="Img 1" /></li>
-              <li><img src="" alt="Img 2" /></li>
-              <li><img src="" alt="Img 2" /></li>
-              <li><img src="" alt="Img 2" /></li>
-              <li><img src="" alt="Img 2" /></li>
+              <li><img onclick="setDesc(this)" src="" desc="" alt="Img 1" data-toggle="modal" data-target=".bd-example-modal-lg" /></li>
+              <li><img onclick="setDesc(this)" src="" desc="" alt="Img 2" data-toggle="modal" data-target=".bd-example-modal-lg"  /></li>
+              <li><img onclick="setDesc(this)" src="" desc="" alt="Img 2" data-toggle="modal" data-target=".bd-example-modal-lg"  /></li>
+              <li><img onclick="setDesc(this)" src="" desc="" alt="Img 2" data-toggle="modal" data-target=".bd-example-modal-lg"  /></li>
+              <li><img onclick="setDesc(this)" src="" desc="" alt="Img 2" data-toggle="modal" data-target=".bd-example-modal-lg"  /></li>              
+              <li><img onclick="setDesc(this)" src="" desc="" alt="Img 1" data-toggle="modal" data-target=".bd-example-modal-lg"  /></li>
+              <li><img onclick="setDesc(this)" src="" desc="" alt="Img 2" data-toggle="modal" data-target=".bd-example-modal-lg"  /></li>
+              <li><img onclick="setDesc(this)" src="" desc="" alt="Img 2" data-toggle="modal" data-target=".bd-example-modal-lg"  /></li>
+              <li><img onclick="setDesc(this)" src="" desc="" alt="Img 2" data-toggle="modal" data-target=".bd-example-modal-lg"  /></li>
+              <li><img onclick="setDesc(this)" src="" desc="" alt="Img 2" data-toggle="modal" data-target=".bd-example-modal-lg"  /></li>
             </ul>
           </div>        
         <!-- <img  src="./imagenes/player-screen.PNG" width="50%" alt=""> -->
@@ -484,7 +481,13 @@
 
 
 
-
+  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <img src="" id="modal-desc" class="w-100" alt="">
+      </div>
+    </div>
+  </div>
 
 
      <!-- lottie anim -->
@@ -508,13 +511,17 @@
 
       $('.slide').hiSlide();
 
-      
+      function setDesc(e) {
+        $("#modal-desc").attr("src", $(e).attr("desc"))
+      }
+
       function setCareusel(arr) {
         var $lis = $(".slide").find('li');
         console.log($lis, arr)
         $lis.each(function(index, element) {
-          console.log(element)
-          $(element).find("img").attr("src", arr[index])
+          let img = $(element).find("img")
+          img.attr("src", arr[index]["src"])
+          img.attr("desc", arr[index]["desc"])
         })      
       }
 
@@ -527,6 +534,7 @@
           display: "none"
         })
       }
+
       $("#lightbox").on("click", function(e) {
           if ($(e.target).prop("tagName") != "VIDEO") {
               $("#lightbox").fadeOut(500)
