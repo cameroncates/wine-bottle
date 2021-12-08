@@ -29,17 +29,23 @@
         var $lis = $ele.find('li');
         var timer = null;
 
-        // $ele.on('mouseenter', function() {
-        // }).on('mouseleave', function() {
-        //     autoPlay();
-        // });
-
-        setTimeout(() => {
+        // 事件
+        $ele.find('.hi-next').on('click', function() {
+            next();
+        });
+        $ele.find('.hi-prev').on('click', function() {
+            states.push(states.shift());
+            move();
+        });
+        $ele.on('mouseenter', function() {
             clearInterval(timer);
             timer = null;
-            autoPlay();            
-        }, 1999);
+        }).on('mouseleave', function() {
+            autoPlay();
+        });
+
         move();
+        autoPlay();
 
         // 让每个 li 对应上面 states 的每个状态
         // 让 li 从正中间展开

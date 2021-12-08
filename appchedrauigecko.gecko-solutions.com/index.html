@@ -399,6 +399,9 @@
         <br><br><br><br>
           <button  onclick="window.location.reload()" class="btn text-white">Close</button>
           <div class="slide hi-slide">
+            
+            <div class="hi-prev "></div>
+            <div class="hi-next "></div>
             <ul>
               <li><img onclick="setDesc(this)" src="" desc="" alt="Img 1" data-toggle="modal" data-target=".bd-example-modal-lg" /></li>
               <li><img onclick="setDesc(this)" src="" desc="" alt="Img 2" data-toggle="modal" data-target=".bd-example-modal-lg"  /></li>
@@ -481,10 +484,17 @@
 
 
 
-  <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <img src="" id="modal-desc" class="w-100" alt="">
+  <div class="modal fade bd-example-modal-lg" style="background-color: black;" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" style="background-color: black;">
+      <div class="modal-content" style="background-color: black;">
+        <div class="row mx-0">
+          <div class="col-lg-8">
+            <img src="" id="modal-desc" class="w-100" alt="Model Description Not Found">
+          </div>
+          <div class="col-lg-4 align-self-center">
+            <img src="" id="modal-preview" class="w-100" alt="Model Preview Not Found">
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -513,6 +523,7 @@
 
       function setDesc(e) {
         $("#modal-desc").attr("src", $(e).attr("desc"))
+        $("#modal-preview").attr("src", $(e).attr("src"))
       }
 
       function setCareusel(arr) {
